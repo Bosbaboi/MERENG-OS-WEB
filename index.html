@@ -118,6 +118,48 @@
     <a href="https://bosbaboi.github.io/merengos-download.github.io/">Download MERENG OS 10</a>
   </div>
     </div>
+<!-- Loader Spinner Bulat -->
+<div class="spinner-wrapper" id="spinner">
+  <div class="spinner"></div>
+</div>
+
+<style>
+  .spinner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    z-index: 9999;
+  }
+
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #333;
+    border-top: 6px solid #00ffcc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  // Hilangkan spinner setelah 2 detik
+  setTimeout(() => {
+    document.getElementById('spinner').style.display = 'none';
+  }, 2000);
+</script>
+     <div class="developer">
+      Developed by Muhammad Bukhari Al Deni ©️2025
+    </div>
+  </div>
 
     
 
