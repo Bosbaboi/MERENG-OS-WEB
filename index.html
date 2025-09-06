@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,34 +8,32 @@
 
   <!-- SEO Meta -->
   <meta name="description"
-    content="Mereng OS is a lightweight custom Windows operating system, suitable for laptops and low-end PCs. It's bloatware-free, fast, and stable.." />
+    content="Mereng OS is a lightweight custom Windows operating system, suitable for laptops and low-end PCs. It's bloatware-free, fast, and stable." />
   <meta name="keywords"
     content="Mereng OS, Tiny10 alternative, custom Windows 11, lightweight OS, Windows modification, Windows without bloatware, low-end Windows" />
   <meta name="author" content="Mereng OS" />
-
+  
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="DENuBArX3B8I3N0GcvWXCDDWOqSEEFVYcEzqb16zIhI" />
 
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Mereng OS - Windows Ringan untuk Semua" />
+  <meta property="og:title" content="Mereng OS - Lightweight Windows for Everyone" />
   <meta property="og:description"
-    content="Windows kustom ringan, cepat, dan bebas bloatware. Ideal untuk pengguna low-end dan tweaker." />
+    content="Custom lightweight Windows, fast, and bloatware-free. Ideal for low-end users and tweakers." />
   <meta property="og:image" content="https://mereng-os-web.vercel.app/favicon.ico" />
   <meta property="og:url" content="https://mereng-os-web.vercel.app/" />
   <meta property="og:type" content="website" />
 
   <!-- Theme & Favicon -->
   <meta name="theme-color" content="#00ffcc" />
-  <link rel="icon" href="favicon.ico" type="Mereng Os Icon" />
-  
-
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
-    /* --- Reset & Base --- */
+    /* Reset */
     *, *::before, *::after {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,41 +44,52 @@
       display: flex;
       flex-direction: column;
     }
-
     a {
       color: inherit;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-
-    a:hover,
-    a:focus {
+    a:hover, a:focus {
       color: #00ffcc;
-      outline: none;
     }
 
-    /* --- Header --- */
+    /* Header */
     header {
       background-color: #0f1117;
-      padding: 3rem 1.5rem 2rem;
+      padding: 1.5rem 1rem 2rem;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0, 255, 204, 0.15);
     }
-
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 900;
       color: #00aaff;
-      margin-bottom: 0.25rem;
-      letter-spacing: 0.05em;
+      margin: 0.25rem 0;
       text-transform: uppercase;
     }
-
     header p {
       font-size: 1.125rem;
       color: #66f0d1;
       font-weight: 600;
       margin-top: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      margin-top: 1rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
     }
 
     main {
@@ -91,13 +100,12 @@
       width: 100%;
     }
 
-    /* --- Logo Section --- */
+    /* Logo Section */
     .logo-section {
       display: flex;
       justify-content: center;
       margin-bottom: 2rem;
     }
-
     .logo-section img {
       max-width: 200px;
       height: auto;
@@ -105,41 +113,35 @@
       box-shadow: 0 0 20px #00ffccaa;
       transition: transform 0.3s ease;
     }
-
     .logo-section img:hover {
       transform: scale(1.05);
     }
 
-    /* --- About Section --- */
+    /* About */
     .about-section {
       text-align: center;
       max-width: 720px;
       margin: 0 auto 3rem;
       color: #b0b0b0;
     }
-
     .about-section h2 {
-      font-size: 2.25rem;
+      font-size: 2rem;
       color: #00ffcc;
       margin-bottom: 1rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
     }
-
     .about-section p {
       font-size: 1.125rem;
       line-height: 1.7;
-      white-space: pre-line;
     }
 
-    /* --- Cards Grid --- */
+    /* Cards Grid */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
       margin-bottom: 3rem;
     }
-
     .card {
       background: #11131b;
       border-radius: 14px;
@@ -147,32 +149,23 @@
       box-shadow: 0 0 20px rgba(0, 170, 255, 0.15);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .card:hover,
-    .card:focus-within {
+    .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 0 30px #00aaffcc;
     }
-
     .card h3 {
       color: #00aaff;
       margin-bottom: 0.5rem;
       font-weight: 700;
       font-size: 1.3rem;
-      letter-spacing: 0.03em;
     }
-
     .card p {
       flex-grow: 1;
       color: #bbb;
-      font-size: 1rem;
-      margin-bottom: 1.25rem;
-      line-height: 1.4;
+      margin-bottom: 1rem;
     }
-
     .download-btn {
       align-self: flex-start;
       background-color: #00ffcc;
@@ -181,172 +174,97 @@
       padding: 0.65rem 1.3rem;
       border-radius: 8px;
       box-shadow: 0 4px 8px #00ffccaa;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
+      transition: 0.3s;
     }
-
-    .download-btn:hover,
-    .download-btn:focus {
+    .download-btn:hover {
       background-color: #00ccaa;
-      box-shadow: 0 6px 12px #00ccaaee;
-      outline: none;
     }
 
-    .download-btn[disabled],
-    .download-btn.disabled {
-      background-color: #444;
-      color: #888;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-
-    /* --- Comparison Table --- */
+    /* Compare Table */
     .compare-section {
       margin-bottom: 3rem;
       overflow-x: auto;
     }
-
     .compare-section h2 {
       text-align: center;
       color: #00aaff;
       font-weight: 700;
-      font-size: 2rem;
       margin-bottom: 1.5rem;
-      letter-spacing: 0.05em;
     }
-
     table.compare-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 320px;
       background: #11131b;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 20px #00aaff33;
     }
-
-    table.compare-table th,
-    table.compare-table td {
-      padding: 1rem 1.25rem;
+    table.compare-table th, table.compare-table td {
+      padding: 1rem;
       text-align: center;
       border-bottom: 1px solid #222;
-      font-size: 1rem;
       color: #ccc;
     }
-
     table.compare-table th {
       background-color: #0d1b2a;
       color: #00aaff;
-      font-weight: 700;
-      letter-spacing: 0.05em;
     }
 
-    table.compare-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* --- Installation Guide --- */
+    /* Installation Guide */
     .install-guide {
       max-width: 900px;
       margin: 0 auto 4rem;
       background-color: #11131b;
-      padding: 2.5rem 2rem;
+      padding: 2rem;
       border-radius: 14px;
       color: #ccc;
-      box-shadow: 0 0 25px #00ffcc44;
     }
-
     .install-guide h2 {
       color: #00ffcc;
-      font-weight: 700;
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.05em;
       text-align: center;
-    }
-
-    .install-guide ol {
-      padding-left: 1.5rem;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .install-guide li {
       margin-bottom: 1rem;
     }
 
-    /* --- Community Section --- */
+    /* Community */
     .community-section {
       max-width: 900px;
       margin: 0 auto 4rem;
       text-align: center;
-      padding: 0 1rem;
     }
-
-    .community-section h2 {
-      color: #00aaff;
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.05em;
-    }
-
-    .community-section p {
-      color: #bbb;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     .community-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 2.5rem;
     }
-
     .community-card {
       background-color: #11131b;
-      padding: 1.75rem 1.5rem;
+      padding: 1.5rem;
       border-radius: 12px;
       color: #e5e5e5;
       box-shadow: 0 0 15px rgba(0, 170, 255, 0.1);
-      transition: box-shadow 0.3s ease;
     }
-
-    .community-card:hover,
-    .community-card:focus-within {
-      box-shadow: 0 0 25px #00aaffcc;
-      outline: none;
-    }
-
     .community-card h3 {
-      margin-top: 0;
       color: #00aaff;
-      font-weight: 700;
-      font-size: 1.25rem;
       margin-bottom: 0.5rem;
     }
-
     .discord-btn {
       background-color: #5865F2;
       color: white;
-      padding: 14px 28px;
+      padding: 12px 24px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 1.125rem;
       display: inline-block;
-      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    .discord-btn:hover,
-    .discord-btn:focus {
-      background-color: #4752c4;
-      transform: scale(1.05);
-      outline: none;
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      nav ul { gap: 1rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .logo-section img { max-width: 150px; }
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.75rem; }
+      .about-section h2 { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -354,7 +272,18 @@
 <body>
   <header>
     <h1>MERENG OS</h1>
-    <p>Windows Custom • Fast • No Bloatware</p>
+    <p>Custom Windows • Fast • No Bloatware</p>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="https://mereng-os-indonesia.vercel.app">Bahasa Indonesia WEB</a></li>
+        <li><a href="htpps://youtube.com/@bukharibukhari5670">Downloads</a></li>
+        <li><a href="http://dsc.gg/merengos">Compare</a></li>
+        <li><a href="#">Comming Sonn</a></li>
+        <li><a href="#">Comming Soon</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -362,34 +291,34 @@
       <img src="mereng-os.png" alt="Mereng OS Logo">
     </section>
 
-    <section class="about-section">
+    <section id="about" class="about-section">
       <h2>About Mereng OS</h2>
       <p>
-        Mereng OS is a Windows mod for gaming based Windows 11/10.  
-        Perfect for older laptops, low-end PCs, or users who want a fast OS without bloatware..  
+        Mereng OS is a Windows modification based on Windows 11/10.  
+        Perfect for old laptops, low-end PCs, or users who want a fast, clean OS without bloatware.
       </p>
     </section>
 
-    <section class="cards-grid">
+    <section id="downloads" class="cards-grid">
       <div class="card">
-        <h3>MeregOS 10</h3>
-        <p>Windows Mod 10.</p>
+        <h3>MerengOS 10</h3>
+        <p>Custom Windows 10 build.</p>
         <a href="https://bosbaboi.github.io/merengos-download.github.io/" class="download-btn">View</a>
       </div>
       <div class="card">
         <h3>MerengOS 11</h3>
-        <p>MWindows 11 mod Bypass TPM and No Bloatware.</p>
+        <p>Windows 11 mod with TPM bypass and no bloatware.</p>
         <a href="https://bosbaboi.github.io/Merengos-11-Download.io/" class="download-btn">View</a>
       </div>
       <div class="card">
         <h3>YouTube Channel</h3>
-        <p>View Channel.</p>
+        <p>Watch tutorials and updates.</p>
         <a href="https://youtube.com/@projectmerengos" class="download-btn">View</a>
       </div>
     </section>
 
-    <section class="compare-section">
-      <h2>VS</h2>
+    <section id="compare" class="compare-section">
+      <h2>Comparison</h2>
       <table class="compare-table">
         <tr>
           <th>Feature</th>
@@ -397,9 +326,9 @@
           <th>Mereng OS</th>
         </tr>
         <tr>
-          <td>Size Install</td>
-          <td>> 20GB</td>
-          <td>± 6GB/9 GB</td>
+          <td>Install Size</td>
+          <td>> 20 GB</td>
+          <td>± 6–9 GB</td>
         </tr>
         <tr>
           <td>Bloatware</td>
@@ -414,17 +343,17 @@
       </table>
     </section>
 
-    <section class="install-guide">
-      <h2>How To Installation</h2>
+    <section id="install" class="install-guide">
+      <h2>Installation Guide</h2>
       <ol>
         <li>Download the latest Mereng OS ISO.</li>
         <li>Create a bootable USB with Rufus.</li>
-        <li>Boot to USB and run Setup.</li>
-        <li>Follow the instructions until finished.</li>
+        <li>Boot from the USB and run Setup.</li>
+        <li>Follow the on-screen instructions until finished.</li>
       </ol>
     </section>
 
-    <section class="community-section">
+    <section id="community" class="community-section">
       <h2>Mereng OS Community</h2>
       <p>Join our community to discuss, share tips, and get the latest updates.</p>
 
@@ -449,8 +378,4 @@
     &copy; 2025 Muhammad Bukhari Al Deni. All rights reserved.
   </footer>
 </body>
-</html>
-
-
-
-
+                                        
